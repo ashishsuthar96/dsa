@@ -11,19 +11,19 @@ we can solve this problem in 2 ways;
 *******************************brute force**************************************************
 time comp: O(n^2) and space comp: O(1);
 public int[] twoSum(int[] numbers, int target) {
-		int n= a.length;
-		for(int i=0;i<n; i++){
-			for(int j=i+1; j<n; j++){
-					int sum= a[i]+a[j];
-					if(sum== target) return new int[]{i, j};
-			}
+	int n= a.length;
+	for(int i=0;i<n; i++){
+		for(int j=i+1; j<n; j++){
+			int sum= a[i]+a[j];
+			if(sum== target) return new int[]{i, j};
 		}
+	}
 }
 
 ********************************************** using hashmap*********************************
-store the number and check if map contains number (target-num) if yes then upated the answer and return
+/*store the number and check if map contains number (target-num) if yes then upated the answer and return
 example: target=10, and map contains 3, and the currect index number 7 so when we search in map (targer-num): (10-7)=3 and map contains this so we update ans and return
-time comp: O(n) and space comp: O(n);
+time comp: O(n) and space comp: O(n);*/
 
 public int[] twoSum(int[] numbers, int target) {
         int[] result = new int[2];
